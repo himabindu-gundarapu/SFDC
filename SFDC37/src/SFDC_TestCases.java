@@ -72,8 +72,8 @@ public class SFDC_TestCases extends ReusableMethods {
 		// TC_32();
 		// TC_33();
 		// TC_34();
-		 TC_35();
-		// TC_37();
+		 // TC_35();
+		 TC_37();
 		CloseBrowser();
 		CloseReport();
 
