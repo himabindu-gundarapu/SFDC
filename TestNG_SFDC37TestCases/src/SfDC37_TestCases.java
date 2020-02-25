@@ -939,7 +939,37 @@ public class SfDC37_TestCases extends ReusableMethodsTestNG {
 //		}
 		Thread.sleep(2000);
 	}
+@Test
+public  void TC_24() throws InterruptedException {
+	//logger = report.startTest("TC_24");
+	OpenUrl("https://login.salesforce.com/");
+	login();
+	WebElement addTabs = driver.findElement(By.xpath("//img[@class='allTabsArrow']"));
+	Click(addTabs, "AddTab");
+	Thread.sleep(2000);
+	WebElement Lead = driver.findElement(By.xpath("//a[@class='listRelatedObject leadBlock title']"));
+	Click(Lead, " Lead");
+	WebElement newBtn = driver.findElement(By.xpath("//input[@name='new']"));
+	Click(newBtn, "New");
+	Thread.sleep(2000);
+	WebElement lastName = driver.findElement(By.xpath("//input[@id='name_lastlea2']"));
+	EnterText(lastName, "ABCD", "lastname");
+	WebElement companyName = driver.findElement(By.xpath("//input[@id='lea3']"));
+	EnterText(companyName, "ABCD", "companyName");
+	WebElement save = driver.findElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"));
+	Click(save, "save");
+	String Expectedstr = "Lead: ABCD ~ Salesforce - Developer Edition";
+	String actual = driver.getTitle();
+	Assert.assertEquals(actual,Expectedstr,"Newly created Lead page not displayed");
+	
+//	if (driver.getCurrentUrl().equalsIgnoreCase(str)) {
+//		logger.log(LogStatus.PASS, "Created Lead view page opened");
+//	} else {
+//		logger.log(LogStatus.PASS, "Created Lead view page not opened");
+//	}
+//	Thread.sleep(2000);
 
+}
 
 
 	@AfterTest
