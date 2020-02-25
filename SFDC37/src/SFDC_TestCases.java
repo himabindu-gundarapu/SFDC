@@ -27,6 +27,7 @@ import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -133,7 +134,7 @@ public class SFDC_TestCases extends ReusableMethods {
 
 	public static void TC3_CheckRememberMe() throws InterruptedException {
 		// CreateReport();
-		logger = report.startTest("TC3_CheckRememberMe()");
+		//logger = report.startTest("TC3_CheckRememberMe()");
 		OpenUrl("https://login.salesforce.com/");
 		logger.log(LogStatus.INFO, "URL opened successfully");
 		WebElement Uname = driver.findElement(By.id("username"));
@@ -141,7 +142,7 @@ public class SFDC_TestCases extends ReusableMethods {
 		WebElement pwd = driver.findElement(By.id("password"));
 		EnterText(pwd, "nishu123@123", "password");
 
-		WebElement Checkbox = driver.findElement(By.xpath("//*[@id=\"login_form\"]/div[3]/label"));
+		WebElement Checkbox = driver.findElement(By.xpath("//input[@class='r4 fl mr8']"));
 		Click(Checkbox, "Checkbox");
 		logger.log(LogStatus.INFO, "Remembercheck box checked");
 		Thread.sleep(3000);
@@ -157,6 +158,17 @@ public class SFDC_TestCases extends ReusableMethods {
 			// System.out.println("home page is not Lunched");
 		}
 		Thread.sleep(2000);
+		 UserMenu();
+		 LogOut();
+		String userNameText = driver.findElement(By.id("username")).getAttribute("value");
+		String str = "himabindu@sbn.com";
+		if(userNameText.equalsIgnoreCase(str)) {
+			logger.log(LogStatus.PASS, "Username populated in username text box");
+		}
+		else {
+			logger.log(LogStatus.FAIL, "Username  not populated in username text box");
+		}
+		
 	}
 
 	public static void Forgotpasword_A() throws InterruptedException {
@@ -166,13 +178,29 @@ public class SFDC_TestCases extends ReusableMethods {
 
 		WebElement forgot_pwd = driver.findElement(By.xpath("//*[@id=\"forgot_password_link\"]"));
 		Click(forgot_pwd, "forgot_pwd");
+		Thread.sleep(2000);
+		String actualTitle = "Forgot Your Password | Salesforce";
+		String expectedTitle=driver.getTitle();
+		if(actualTitle.equalsIgnoreCase(expectedTitle)) {
 		logger.log(LogStatus.PASS, "forgotpassword checked");
+		}
+		else {
+			logger.log(LogStatus.PASS, "forgotpassword not checked");
+		}
 		Thread.sleep(2000);
 		WebElement Uname = driver.findElement(By.xpath("//*[@id=\"un\"]"));
 		EnterText(Uname, "himabindu@sbn.com", "username");
 		WebElement ContinueBtn = driver.findElement(By.xpath("//*[@id=\"continue\"]"));
 		Click(ContinueBtn, "continue");
 		Thread.sleep(2000);
+		String actualmsg = "Check Your Email";
+		String expected = driver.findElement(By.id("header")).getText();
+		if(actualmsg.equalsIgnoreCase(expected)) {
+			logger.log(LogStatus.PASS, "Email has sent ");
+			}
+			else {
+				logger.log(LogStatus.PASS, "Email hasn't sent");
+			}
 
 	}
 
@@ -188,6 +216,14 @@ public class SFDC_TestCases extends ReusableMethods {
 		logger.log(LogStatus.PASS, "wrong password entered");
 		WebElement loginBtn = driver.findElement(By.xpath("//*[@id=\"Login\"]"));
 		Click(loginBtn, "loginbutton");
+		String ActualError = "Please check your username and password. If you still can't log in, contact your Salesforce administrator.";
+		String expectedError =driver.findElement(By.id("error")).getText();
+		if(ActualError.equalsIgnoreCase(expectedError)){
+			logger.log(LogStatus.PASS, "\"Username and password incorrect\");");
+		}
+		else {
+			logger.log(LogStatus.FAIL, "\"Username and password correct\");");
+		}
 		Thread.sleep(2000);
 
 	}
@@ -220,8 +256,7 @@ public class SFDC_TestCases extends ReusableMethods {
 		WebElement myprofileBtn = driver.findElement(By.xpath("//*[@id=\"userNav-menuItems\"]/a[1]"));
 		Click(myprofileBtn, "myprofile ");
 		System.out.println(" user is on my profile");
-		WebElement editprofile = driver
-				.findElement(By.xpath("//*[@id=\"chatterTab\"]/div[2]/div[2]/div[1]/h3/div/div/a/img"));
+		WebElement editprofile = driver.findElement(By.xpath("//*[@id=\"chatterTab\"]/div[2]/div[2]/div[1]/h3/div/div/a/img"));
 		Click(editprofile, "Edit ");
 		Thread.sleep(2000);
 
