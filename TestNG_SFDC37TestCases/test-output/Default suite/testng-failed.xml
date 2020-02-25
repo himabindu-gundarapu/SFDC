@@ -5,26 +5,9 @@
     <classes>
       <class name="SfDC37_TestCases">
         <methods>
-          <include name="TC3_CheckRememberMe"/>
-          <include name="TC_11CreateNewView"/>
-          <include name="TC_07"/>
-          <include name="TC_18"/>
-          <include name="TC2_LoginToSalesForce"/>
-          <include name="TC_12EditView"/>
-          <include name="TC_10"/>
-          <include name="Forgotpassword_4B"/>
-          <include name="Intializer"/>
-          <include name="TC_08"/>
-          <include name="TC_19"/>
-          <include name="TC_09"/>
-          <include name="TC_15"/>
-          <include name="TC_14"/>
-          <include name="TC_06"/>
-          <include name="TC_17"/>
-          <include name="TC_05"/>
-          <include name="TC_16"/>
           <include name="quitBrowser"/>
-          <include name="TC_13"/>
+          <include name="TC_21LeadsSelectView"/>
+          <include name="Intializer"/>
         </methods>
       </class> <!-- SfDC37_TestCases -->
     </classes>

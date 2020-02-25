@@ -809,6 +809,36 @@ public class SfDC37_TestCases extends ReusableMethodsTestNG {
 //			logger.log(LogStatus.PASS, "Leads home page not  displayed");
 //		}
 	}
+	@Test
+	public void TC_21LeadsSelectView() throws InterruptedException {
+		OpenUrl("https://login.salesforce.com/");
+		login();
+		//logger = report.startTest("TC_20LeadTab");
+		WebElement addTabs = driver.findElement(By.xpath("//img[@class='allTabsArrow']"));
+		Click(addTabs, "AddTab");
+		Thread.sleep(2000);
+		WebElement Lead = driver.findElement(By.xpath("//a[@class='listRelatedObject leadBlock title']"));
+		Click(Lead, " Lead");
+		Thread.sleep(2000);	
+		String actualTitle = driver.findElement(By.xpath("//h1[@class='pageType']")).getText();
+		String expected ="Leads";
+		Assert.assertEquals(actualTitle, expected,"Leads home page is displayed");
+		WebElement LeadList = driver.findElement(By.xpath("//select[@id='fcf']"));
+		String str1 = LeadList.getText();
+		String[] ExpectedArray =str1.split("\n");
+		//Select DropDownList = new Select(LeadList);
+		//List<WebElement> DDList = DropDownList.getOptions();
+		String str = "All Open Leads;My Unread Leads;Recently Viewed Leads;Today's Leads;View - Custom 1;View - Custom 2";
+		String[] ActualArray= str.split(";");
+		CompareStringArrays(ExpectedArray,ActualArray);
+	
+//		for (WebElement e : DDList) {
+//			System.out.println(e.getText());
+//		}
+//		logger.log(LogStatus.INFO, "Leads list dropdown displayed");
+
+	}
+
 
 
 	@AfterTest
