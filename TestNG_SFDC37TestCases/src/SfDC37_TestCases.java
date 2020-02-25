@@ -838,6 +838,79 @@ public class SfDC37_TestCases extends ReusableMethodsTestNG {
 //		logger.log(LogStatus.INFO, "Leads list dropdown displayed");
 
 	}
+	@Test
+	public void TC_22DefaultView() throws InterruptedException {
+		OpenUrl("https://login.salesforce.com/");
+		login();
+		//logger = report.startTest("TC_20LeadTab");
+		WebElement addTabs = driver.findElement(By.xpath("//img[@class='allTabsArrow']"));
+		Click(addTabs, "AddTab");
+		Thread.sleep(2000);
+		WebElement Lead = driver.findElement(By.xpath("//a[@class='listRelatedObject leadBlock title']"));
+		Click(Lead, " Lead");
+		String actualTitle = driver.findElement(By.xpath("//h1[@class='pageType']")).getText();
+		String expected ="Leads";
+		Assert.assertEquals(actualTitle, expected,"Leads home page is displayed");
+		WebElement LeadList = driver.findElement(By.xpath("//select[@id='fcf']"));
+		Select DropDownList = new Select(LeadList);
+		DropDownList.selectByVisibleText("Today's Leads");
+		Thread.sleep(2000);
+		UserMenu();
+		String expectedstr = DropDownList.getFirstSelectedOption().getText();
+		String actual = "Today's Leads";
+		Assert.assertEquals(actual, expectedstr,"DropDown not dispalyed with selected value");
+		WebElement LogOut = driver.findElement(By.xpath("//a[contains(text(),'Logout')]"));
+		Click(LogOut, "LogOut");
+		Thread.sleep(2000);
+		String ActualTitle = driver.getTitle();
+		System.out.println(ActualTitle);
+		String expectedTitle = "Login | Salesforce";
+		Assert.assertEquals(ActualTitle, expectedTitle, "SalesForce login page is not displayed");
+		//logger.log(LogStatus.INFO, "logged out");
+		login();
+		WebElement addTabs1 = driver.findElement(By.xpath("//img[@class='allTabsArrow']"));
+		Click(addTabs1, "AddTab");
+		Thread.sleep(2000);
+		WebElement Lead1 = driver.findElement(By.xpath("//a[@class='listRelatedObject leadBlock title']"));
+		Click(Lead1, " Lead");
+		Thread.sleep(2000);
+		//Check dropdown default value
+		WebElement LeadList1 = driver.findElement(By.xpath("//select[@id='fcf']"));
+		Select DropDownList1 = new Select(LeadList1);
+		String expectedstr1 = DropDownList1.getFirstSelectedOption().getText();
+		System.out.println(expectedstr1);
+		String actual1 = "Today's Leads";
+		Assert.assertEquals(actual1, expectedstr1,"DropDown not dispalyed with selected value");
+		
+		WebElement GoBtn = driver.findElement(By.xpath("//span[@class='fBody']//input[@name='go']"));
+		Click(GoBtn, "GoBtn");
+		Thread.sleep(2000);
+		// WebElement LeadList1 = driver.findElement(By.xpath("//select[@id='fcf']"));
+//			
+//		Select DropDownList1 = new Select(driver.findElement(By.xpath("//select[@id='fcf']")));
+//
+//		String str = DropDownList1.getFirstSelectedOption().getText();
+//		Thread.sleep(2000);
+//		if (str.equals("Today's Leads")) {
+//			logger.log(LogStatus.INFO, "The lead view displayed with the selcted view from last session");
+//		} else {
+//			logger.log(LogStatus.INFO, "The lead view didnot display selcted view from last session");
+//		}
+		String LeadActualTitle = "Leads ~ Salesforce - Developer Edition";
+		String ExpectedTitleLeads = driver.getTitle();
+		Assert.assertEquals(LeadActualTitle, ExpectedTitleLeads,"Leads view page not displayed");
+		
+//		if (driver.getCurrentUrl().equalsIgnoreCase(LeadUrl)) {
+//			logger.log(LogStatus.PASS, "Todays Lead page is displayed");
+//			System.out.println("Todays Lead page is displayed");
+//		} else {
+//			logger.log(LogStatus.PASS, "Todays Lead page is not displayed");
+//			System.out.println("Todays Lead page is not displayed");
+//		}
+//
+		Thread.sleep(2000);
+
+	}
 
 
 

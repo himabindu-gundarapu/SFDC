@@ -5,8 +5,8 @@
     <classes>
       <class name="SfDC37_TestCases">
         <methods>
+          <include name="TC_22DefaultView"/>
           <include name="quitBrowser"/>
-          <include name="TC_21LeadsSelectView"/>
           <include name="Intializer"/>
         </methods>
       </class> <!-- SfDC37_TestCases -->
