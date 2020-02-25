@@ -782,20 +782,31 @@ public class SfDC37_TestCases extends ReusableMethodsTestNG {
 		System.out.println(str1);
 		IncludeList .selectByVisibleText(str1);
 		Thread.sleep(2000);
-//		WebElement RunReportBtn = driver.findElement(By.xpath("//input[@title='Run Report']"));
-//		Click(RunReportBtn, "RunReport");
-//		String Actual = driver.getTitle();
-//		String expectedTitle = "Opportunity Report ~ Salesforce - Developer Edition";
-//		Assert.assertEquals(Actual, expectedTitle);
-//		
+		WebElement RunReportBtn = driver.findElement(By.xpath("//input[@title='Run Report']"));
+		Click(RunReportBtn, "RunReport");
+		String Actual = driver.getTitle();
+		String expectedTitle = "Opportunity Report ~ Salesforce - Developer Edition";
+		Assert.assertEquals(Actual, expectedTitle);
+	}
+	@Test
+	public  void TC_20LeadTab() throws InterruptedException {
+		OpenUrl("https://login.salesforce.com/");
+		login();
+		//logger = report.startTest("TC_20LeadTab");
+		WebElement addTabs = driver.findElement(By.xpath("//img[@class='allTabsArrow']"));
+		Click(addTabs, "AddTab");
+		Thread.sleep(2000);
+		WebElement Lead = driver.findElement(By.xpath("//a[@class='listRelatedObject leadBlock title']"));
+		Click(Lead, " Lead");
+		Thread.sleep(2000);
 		
-//			String[] array = {"Current FQ","Next FQ","Previous FQ","Current and Next 3 FQ","Current FY","Current and Next FY","Current and Previous FY","Previous FY","Next Fy"};
-//			for(int i =0;i<DropDownList.size();i++) {
-//				
-//			}
-//			
-//		for (WebElement e : DropDownList) {
-//			System.out.println(e.getText());
+		String actualTitle = driver.findElement(By.xpath("//h1[@class='pageType']")).getText();
+		String expected ="Leads";
+		Assert.assertEquals(actualTitle, expected,"Leads home page is displayed");
+//		if (actualTitle.contains("Leads")) {
+//			logger.log(LogStatus.PASS, "Leads home page displayed");
+//		} else {
+//			logger.log(LogStatus.PASS, "Leads home page not  displayed");
 //		}
 	}
 
