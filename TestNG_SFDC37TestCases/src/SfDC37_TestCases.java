@@ -855,10 +855,10 @@ public class SfDC37_TestCases extends ReusableMethodsTestNG {
 		Select DropDownList = new Select(LeadList);
 		DropDownList.selectByVisibleText("Today's Leads");
 		Thread.sleep(2000);
-		UserMenu();
 		String expectedstr = DropDownList.getFirstSelectedOption().getText();
 		String actual = "Today's Leads";
 		Assert.assertEquals(actual, expectedstr,"DropDown not dispalyed with selected value");
+		UserMenu();
 		WebElement LogOut = driver.findElement(By.xpath("//a[contains(text(),'Logout')]"));
 		Click(LogOut, "LogOut");
 		Thread.sleep(2000);
@@ -910,6 +910,34 @@ public class SfDC37_TestCases extends ReusableMethodsTestNG {
 //
 		Thread.sleep(2000);
 
+	}
+	@Test
+	public void TC_23() throws InterruptedException {
+		//logger = report.startTest("TC_23");
+		OpenUrl("https://login.salesforce.com/");
+		login();
+		WebElement addTabs = driver.findElement(By.xpath("//img[@class='allTabsArrow']"));
+		Click(addTabs, "AddTab");
+		Thread.sleep(2000);
+		WebElement Lead = driver.findElement(By.xpath("//a[@class='listRelatedObject leadBlock title']"));
+		Click(Lead, " Lead");
+		WebElement LeadList = driver.findElement(By.xpath("//select[@id='fcf']"));
+		Select DropDownList = new Select(LeadList);
+		DropDownList.selectByVisibleText("Today's Leads");
+		WebElement GoBtn = driver.findElement(By.xpath("//span[@class='fBody']//input[@name='go']"));
+		Click(GoBtn, "GoBtn");
+		String ActualLeadTitle =driver.getTitle();
+		String ExpectedTtile = "Leads ~ Salesforce - Developer Edition";
+		Assert.assertEquals(ActualLeadTitle, ExpectedTtile,"Today's lead page not dispalyed");
+
+//		if (driver.getCurrentUrl().equalsIgnoreCase(LeadUrl)) {
+//			logger.log(LogStatus.PASS, "Todays Lead page is displayed");
+//			System.out.println("Todays Lead page is displayed");
+//		} else {
+//			logger.log(LogStatus.PASS, "Todays Lead page is not displayed");
+//			System.out.println("Todays Lead page is not displayed");
+//		}
+		Thread.sleep(2000);
 	}
 
 
