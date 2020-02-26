@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="19534" started-at="2020-02-25T21:51:57 PST" finished-at="2020-02-25T21:52:16 PST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="19534" started-at="2020-02-25T21:51:57 PST" finished-at="2020-02-25T21:52:16 PST">
+      <class name="LoginSFDC">
+        <test-method status="PASS" signature="Initializer()[pri:0, instance:LoginSFDC@59e5ddf]" name="Initializer" is-config="true" duration-ms="2417" started-at="2020-02-25T21:51:57 PST" finished-at="2020-02-25T21:51:59 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initializer -->
+        <test-method status="PASS" signature="TC1_LoginErrorMessage()[pri:0, instance:LoginSFDC@59e5ddf]" name="TC1_LoginErrorMessage" duration-ms="3882" started-at="2020-02-25T21:51:59 PST" finished-at="2020-02-25T21:52:03 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC1_LoginErrorMessage -->
+        <test-method status="PASS" signature="TC2_LoginToSalesForce()[pri:0, instance:LoginSFDC@59e5ddf]" name="TC2_LoginToSalesForce" duration-ms="12665" started-at="2020-02-25T21:52:03 PST" finished-at="2020-02-25T21:52:16 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC2_LoginToSalesForce -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:LoginSFDC@59e5ddf]" name="quitBrowser" is-config="true" duration-ms="472" started-at="2020-02-25T21:52:16 PST" finished-at="2020-02-25T21:52:16 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- LoginSFDC -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
