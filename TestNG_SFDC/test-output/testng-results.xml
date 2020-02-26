@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80" started-at="2020-02-21T20:06:16 PST" finished-at="2020-02-21T20:06:16 PST">
+  <suite name="Suite" duration-ms="21" started-at="2020-02-25T18:29:22 PST" finished-at="2020-02-25T18:29:22 PST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="80" started-at="2020-02-21T20:06:16 PST" finished-at="2020-02-21T20:06:16 PST">
-      <class name="SDFC_testcases">
-        <test-method status="PASS" signature="demo()[pri:0, instance:SDFC_testcases@3632be31]" name="demo" duration-ms="19" started-at="2020-02-21T20:06:16 PST" finished-at="2020-02-21T20:06:16 PST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- demo -->
-      </class> <!-- SDFC_testcases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    <test name="Test" duration-ms="21" started-at="2020-02-25T18:29:22 PST" finished-at="2020-02-25T18:29:22 PST">
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

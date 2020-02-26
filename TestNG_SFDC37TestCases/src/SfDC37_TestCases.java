@@ -970,6 +970,50 @@ public  void TC_24() throws InterruptedException {
 //	Thread.sleep(2000);
 
 }
+@Test
+public void TC_25() throws InterruptedException {
+	//logger = report.startTest("TC_24");
+	OpenUrl("https://login.salesforce.com/");
+	login();
+	WebElement addTabs = driver.findElement(By.xpath("//img[@class='allTabsArrow']"));
+	Click(addTabs, "AddTab");
+	Thread.sleep(2000);
+	WebElement contacts = driver.findElement(By.xpath("//a[@class='listRelatedObject contactBlock title']"));
+	Click(contacts, "contacts");
+	Thread.sleep(2000);
+	String Actual = driver.getTitle();
+	String Expected = "Contacts: Home ~ Salesforce - Developer Edition";
+	Assert.assertEquals( Actual, Expected,"Contacts home page is displayed");
+	//logger.log(LogStatus.INFO, "Contact home page displayed");
+	WebElement newBtn = driver.findElement(By.xpath("//input[@name='new']"));
+	Click(newBtn, "New");
+	String Actual1=driver.getTitle();
+	String Expected1 = "Contact Edit: New Contact ~ Salesforce - Developer Edition";
+	Assert.assertEquals(Actual1, Expected1);
+	WebElement lastname = driver.findElement(By.xpath("//input[@id='name_lastcon2']"));
+	EnterText(lastname, "macheal", "lastname");
+	WebElement AccountName = driver.findElement(By.xpath("//input[@id='con4']"));
+	EnterText(AccountName, "Foster123", " AccountName");
+	WebElement searchImage = driver.findElement(By.xpath("//a[@id='con4_lkwgt']//img[@class='lookupIcon']"));
+	Click(searchImage, "searchImage");
+	String oldwindow = driver.getWindowHandle();
+	Set<String> getAllWindows = driver.getWindowHandles();
+	String[] getWindow = getAllWindows.toArray(new String[getAllWindows.size()]);
+	// System.out.println(driver.getCurrentUrl());
+	driver.switchTo().window(getWindow[1]);
+	System.out.println(driver.getCurrentUrl());
+	driver.get("https://na174.salesforce.com/_ui/common/data/LookupPage?lkfm=editPage&lknm=con4&lktp=001&lksrch");
+	driver.manage().window().maximize();
+	Thread.sleep(2000);
+//	WebElement searchtext = driver.findElement(By.id("lksrch"));
+//	EnterText(searchtext, "Foster1234", "searchtext");
+	WebElement Newbtn = driver.findElement(By.xpath("//input[@name='new']"));
+	Newbtn.click();
+	System.out.println(driver.getCurrentUrl());
+	driver.switchTo().window(oldwindow);
+
+}
+
 
 
 	@AfterTest
