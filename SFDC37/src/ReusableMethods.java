@@ -29,18 +29,6 @@ public class ReusableMethods {
 		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-//		Map<String, Object> prefs = new HashMap<String, Object>();
-//		prefs.put("profile.default_content_setting_values.notifications", 2);
-//		prefs.put("credentials_enable_service", false);
-//		prefs.put("profile.password_manager_enabled", false);
-//		ChromeOptions options = new ChromeOptions();
-//		options.setExperimentalOption("prefs", prefs);
-//		options.addArguments("start-maximized");
-//		options.addArguments("disable-infobars");
-//		options.addArguments("--disable-extensions");
-//		options.addArguments("--disable-notifications");
-//		driver = new ChromeDriver(options);
-		
 		
 		
 	}
@@ -92,11 +80,7 @@ public class ReusableMethods {
 	
 
 	}
-	public static void UserMenu() {
-		WebElement usermenuBtn = driver.findElement(By.xpath("//*[@id=\"userNav\"]"));
-		//*[@id="userNav"]
-		Click(usermenuBtn,"usermenubutton");		
-	}
+	
 	public static void LogOut() throws InterruptedException {
 		WebElement logOutBtn = driver.findElement(By.xpath("//*[@id=\"userNav-menuItems\"]/a[5]"));
 		Click(logOutBtn, "logout");

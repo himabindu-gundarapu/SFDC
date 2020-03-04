@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="31922" started-at="2020-02-25T23:47:09 PST" finished-at="2020-02-25T23:47:41 PST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="31922" started-at="2020-02-25T23:47:09 PST" finished-at="2020-02-25T23:47:41 PST">
+      <class name="SfdcTestCases">
+        <test-method status="PASS" signature="Initializer()[pri:0, instance:SfdcTestCases@1b68ddbd]" name="Initializer" is-config="true" duration-ms="2726" started-at="2020-02-25T23:47:09 PST" finished-at="2020-02-25T23:47:12 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initializer -->
+        <test-method status="PASS" signature="Forgotpasword_A()[pri:0, instance:SfdcTestCases@1b68ddbd]" name="Forgotpasword_A" duration-ms="8513" started-at="2020-02-25T23:47:12 PST" finished-at="2020-02-25T23:47:20 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Forgotpasword_A -->
+        <test-method status="PASS" signature="TC3_CheckRememberMe()[pri:0, instance:SfdcTestCases@1b68ddbd]" name="TC3_CheckRememberMe" duration-ms="20123" started-at="2020-02-25T23:47:20 PST" finished-at="2020-02-25T23:47:40 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC3_CheckRememberMe -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:SfdcTestCases@1b68ddbd]" name="quitBrowser" is-config="true" duration-ms="482" started-at="2020-02-25T23:47:40 PST" finished-at="2020-02-25T23:47:41 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- SfdcTestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="22524" started-at="2020-02-27T23:45:46 PST" finished-at="2020-02-27T23:46:09 PST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="22524" started-at="2020-02-27T23:45:46 PST" finished-at="2020-02-27T23:46:09 PST">
+      <class name="TestCases">
+        <test-method status="PASS" signature="Initializer()[pri:0, instance:TestCases@59e5ddf]" name="Initializer" is-config="true" duration-ms="3786" started-at="2020-02-27T23:45:46 PST" finished-at="2020-02-27T23:45:50 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initializer -->
+        <test-method status="PASS" signature="EditUser()[pri:0, instance:TestCases@59e5ddf]" name="EditUser" duration-ms="18203" started-at="2020-02-27T23:45:50 PST" finished-at="2020-02-27T23:46:08 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditUser -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:TestCases@59e5ddf]" name="quitBrowser" is-config="true" duration-ms="444" started-at="2020-02-27T23:46:08 PST" finished-at="2020-02-27T23:46:09 PST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- TestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
