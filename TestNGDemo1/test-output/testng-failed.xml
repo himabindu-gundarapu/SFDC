@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="CTest(failed)">
-    <parameter name="browser" value="firefox"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="FTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="LoginSFDC">
         <methods>
@@ -13,5 +13,5 @@
         </methods>
       </class> <!-- LoginSFDC -->
     </classes>
-  </test> <!-- CTest(failed) -->
+  </test> <!-- FTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
