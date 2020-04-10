@@ -130,6 +130,11 @@ public class ReusableMethods {
 		// System.out.println("home page is not Lunched");
 		}
 	}
+	public static void UserMenu() {
+		WebElement usermenuBtn = driver.findElement(By.xpath("//*[@id=\"userNav\"]"));
+		//*[@id="userNav"]
+		Click(usermenuBtn,"usermenubutton");
+	}
 	public static void SwitchWindow(String oldwindow ,String Url) {
 		
 		Set<String> getAllWindows = driver.getWindowHandles();

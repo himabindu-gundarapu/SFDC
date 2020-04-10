@@ -3,20 +3,37 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginSFDC extends ReusableMethodsSFDC {
 	
 	@BeforeTest
-	public void Initializer() {
+	@Parameters("browser")
+	public void Initializer(String browser) {
+		if(browser.equals("chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}
+		else
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}
 		CreateReport();
-		InitializeDriver();
+		//InitializeDriver();
 		
 	}
 	@Test
+	@Parameters("browser")
 	public  void TC1_LoginErrorMessage() throws InterruptedException {
 	// CreateReport();
 	logger = report.startTest("TC1_LoginErrorMessage");

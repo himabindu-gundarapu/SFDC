@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5554" started-at="2020-03-10T22:27:26 PDT" finished-at="2020-03-10T22:27:31 PDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5554" started-at="2020-03-10T22:27:26 PDT" finished-at="2020-03-10T22:27:31 PDT">
+      <class name="TekArchTestCases">
+        <test-method status="PASS" signature="Intializer()[pri:0, instance:TekArchTestCases@4f063c0a]" name="Intializer" is-config="true" duration-ms="2934" started-at="2020-03-10T22:27:26 PDT" finished-at="2020-03-10T22:27:29 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Intializer -->
+        <test-method status="PASS" signature="loginToPortal(java.lang.String, java.lang.String)[pri:0, instance:TekArchTestCases@4f063c0a]" name="loginToPortal" duration-ms="1649" started-at="2020-03-10T22:27:29 PDT" data-provider="loginUserData" finished-at="2020-03-10T22:27:30 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[himabindu@ta.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[himabindu]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToPortal -->
+        <test-method status="PASS" signature="loginToPortal(java.lang.String, java.lang.String)[pri:0, instance:TekArchTestCases@4f063c0a]" name="loginToPortal" duration-ms="504" started-at="2020-03-10T22:27:30 PDT" data-provider="loginUserData" finished-at="2020-03-10T22:27:31 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mithun@ta.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mithun]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToPortal -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:TekArchTestCases@4f063c0a]" name="quitBrowser" is-config="true" duration-ms="396" started-at="2020-03-10T22:27:31 PDT" finished-at="2020-03-10T22:27:31 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- TekArchTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

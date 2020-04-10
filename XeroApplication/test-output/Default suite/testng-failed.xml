@@ -9,7 +9,6 @@
           <include name="forgotPassword"/>
           <include name="closeBrowser"/>
           <include name="incorrectEmail"/>
-          <include name="NavigateToXero"/>
         </methods>
       </class> <!-- XeroAppTestCases -->
     </classes>

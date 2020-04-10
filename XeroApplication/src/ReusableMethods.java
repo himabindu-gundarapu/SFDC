@@ -38,7 +38,7 @@ public class ReusableMethods {
 	
 	public  void CreateReport() {
 		String fileName = new SimpleDateFormat("'XeroAppReport_'YYYYMMddHHmm'.html'").format(new Date());
-		String path = "/Users/sayanna/eclipse-workspace/XeroAppExtentReport/"+ fileName;
+		String path = "/Users/sayanna/work/SFDC/XeroApplication/Report/"+ fileName;
 		report = new ExtentReports(path);
 		
 	}

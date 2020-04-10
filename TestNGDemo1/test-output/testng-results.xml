@@ -2,28 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="18085" started-at="2020-02-25T23:11:20 PST" finished-at="2020-02-25T23:11:38 PST">
+  <suite name="Suite" duration-ms="17081" started-at="2020-03-04T23:24:27 PST" finished-at="2020-03-04T23:24:44 PST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="18085" started-at="2020-02-25T23:11:20 PST" finished-at="2020-02-25T23:11:38 PST">
+    <test name="CTest" duration-ms="17081" started-at="2020-03-04T23:24:27 PST" finished-at="2020-03-04T23:24:44 PST">
       <class name="LoginSFDC">
-        <test-method status="PASS" signature="Initializer()[pri:0, instance:LoginSFDC@59e5ddf]" name="Initializer" is-config="true" duration-ms="3102" started-at="2020-02-25T23:11:20 PST" finished-at="2020-02-25T23:11:23 PST">
+        <test-method status="PASS" signature="Initializer(java.lang.String)[pri:0, instance:LoginSFDC@e320068]" name="Initializer" is-config="true" duration-ms="5402" started-at="2020-03-04T23:24:27 PST" finished-at="2020-03-04T23:24:33 PST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Initializer -->
-        <test-method status="PASS" signature="TC1_LoginErrorMessage()[pri:0, instance:LoginSFDC@59e5ddf]" name="TC1_LoginErrorMessage" duration-ms="4414" started-at="2020-02-25T23:11:23 PST" finished-at="2020-02-25T23:11:27 PST">
+        <test-method status="PASS" signature="TC1_LoginErrorMessage()[pri:0, instance:LoginSFDC@e320068]" name="TC1_LoginErrorMessage" duration-ms="3943" started-at="2020-03-04T23:24:33 PST" finished-at="2020-03-04T23:24:37 PST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1_LoginErrorMessage -->
-        <test-method status="PASS" signature="TC2_LoginToSalesForce()[pri:0, instance:LoginSFDC@59e5ddf]" name="TC2_LoginToSalesForce" duration-ms="10014" started-at="2020-02-25T23:11:27 PST" finished-at="2020-02-25T23:11:37 PST">
+        <test-method status="PASS" signature="TC2_LoginToSalesForce()[pri:0, instance:LoginSFDC@e320068]" name="TC2_LoginToSalesForce" duration-ms="3803" started-at="2020-03-04T23:24:37 PST" finished-at="2020-03-04T23:24:40 PST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC2_LoginToSalesForce -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:LoginSFDC@59e5ddf]" name="quitBrowser" is-config="true" duration-ms="461" started-at="2020-02-25T23:11:37 PST" finished-at="2020-02-25T23:11:38 PST">
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:LoginSFDC@e320068]" name="quitBrowser" is-config="true" duration-ms="3919" started-at="2020-03-04T23:24:40 PST" finished-at="2020-03-04T23:24:44 PST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- LoginSFDC -->
-    </test> <!-- Test -->
+    </test> <!-- CTest -->
   </suite> <!-- Suite -->
 </testng-results>
