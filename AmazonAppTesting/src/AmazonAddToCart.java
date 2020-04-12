@@ -35,18 +35,21 @@ public class AmazonAddToCart {
 		Thread.sleep(4000);
 		driverMob.findElement(By.id("com.amazon.mShop.android.shopping:id/sign_in_button")).click();
 		Thread.sleep(5000);
-//		driverMob.findElement(By.id("ap_email_login")).click();
+			
+		//driverMob.findElement(By.id("ap_email_login")).click();
+		driverMob.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText")).click();
 		
-		Wait<AndroidDriver<MobileElement>> wait = new FluentWait<AndroidDriver<MobileElement>>(driverMob)							
-				.withTimeout(Duration.ofSeconds(100)) 			
-				.pollingEvery(Duration.ofMillis(600)) 			
-				.ignoring(NoSuchElementException.class);
-		
-
-		MobileElement emailLink = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ap_email_login")));
-		Thread.sleep(3000);
-		emailLink.click();
+//		
+//		Wait<AndroidDriver<MobileElement>> wait = new FluentWait<AndroidDriver<MobileElement>>(driverMob)							
+//				.withTimeout(Duration.ofSeconds(100)) 			
+//				.pollingEvery(Duration.ofMillis(600)) 			
+//				.ignoring(NoSuchElementException.class);
+//		
 //
+//		MobileElement emailLink = (MobileElement) wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ap_email_login")));
+//		Thread.sleep(3000);
+//		emailLink.click();
+////
 //		driverMob.findElementByAndroidUIAutomator(
 //				"UiSelector().className(\"android.view.view\").text(\"ap_ra_email_or_phone\")").click();
 //driverMob.pressKeyCode(AndroidKeyCode.BACK);
