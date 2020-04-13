@@ -8,6 +8,9 @@
           <include name="intialize"/>
           <include name="forgotPassword"/>
           <include name="closeBrowser"/>
+          <include name="incorrectEmail"/>
+          <include name="incorrectPassword"/>
+          <include name="NavigateToXero"/>
         </methods>
       </class> <!-- XeroAppTestCases -->
     </classes>
