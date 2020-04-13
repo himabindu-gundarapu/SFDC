@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="27557" started-at="2020-04-10T11:30:07 PDT" finished-at="2020-04-10T11:30:35 PDT">
+  <suite name="Default suite" duration-ms="26298" started-at="2020-04-12T22:15:17 PDT" finished-at="2020-04-12T22:15:43 PDT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="27557" started-at="2020-04-10T11:30:07 PDT" finished-at="2020-04-10T11:30:35 PDT">
+    <test name="Default test" duration-ms="26298" started-at="2020-04-12T22:15:17 PDT" finished-at="2020-04-12T22:15:43 PDT">
       <class name="XeroAppTestCases">
-        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="2070" started-at="2020-04-10T11:30:07 PDT" finished-at="2020-04-10T11:30:09 PDT">
+        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="3102" started-at="2020-04-12T22:15:17 PDT" finished-at="2020-04-12T22:15:20 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialize -->
-        <test-method status="PASS" signature="NavigateToXero()[pri:0, instance:XeroAppTestCases@67205a84]" name="NavigateToXero" duration-ms="10040" started-at="2020-04-10T11:30:09 PDT" finished-at="2020-04-10T11:30:19 PDT">
+        <test-method status="PASS" signature="NavigateToXero()[pri:0, instance:XeroAppTestCases@67205a84]" name="NavigateToXero" duration-ms="7576" started-at="2020-04-12T22:15:20 PDT" finished-at="2020-04-12T22:15:28 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NavigateToXero -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="398" started-at="2020-04-10T11:30:19 PDT" finished-at="2020-04-10T11:30:20 PDT">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="395" started-at="2020-04-12T22:15:28 PDT" finished-at="2020-04-12T22:15:28 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="1096" started-at="2020-04-10T11:30:20 PDT" finished-at="2020-04-10T11:30:21 PDT">
+        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="1042" started-at="2020-04-12T22:15:28 PDT" finished-at="2020-04-12T22:15:29 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialize -->
-        <test-method status="FAIL" signature="forgotPassword()[pri:0, instance:XeroAppTestCases@67205a84]" name="forgotPassword" duration-ms="2205" started-at="2020-04-10T11:30:21 PDT" finished-at="2020-04-10T11:30:23 PDT">
+        <test-method status="FAIL" signature="forgotPassword()[pri:0, instance:XeroAppTestCases@67205a84]" name="forgotPassword" duration-ms="2096" started-at="2020-04-12T22:15:29 PDT" finished-at="2020-04-12T22:15:31 PDT">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Link to rest Message is not displayed expected [A link to reset your password has been sent to: testQA20mar@gmail.com] but found [A link to reset your password has been sent to:
@@ -71,35 +71,35 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPassword -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="200" started-at="2020-04-10T11:30:23 PDT" finished-at="2020-04-10T11:30:23 PDT">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="129" started-at="2020-04-12T22:15:31 PDT" finished-at="2020-04-12T22:15:31 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="1123" started-at="2020-04-10T11:30:23 PDT" finished-at="2020-04-10T11:30:24 PDT">
+        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="1061" started-at="2020-04-12T22:15:31 PDT" finished-at="2020-04-12T22:15:33 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialize -->
-        <test-method status="PASS" signature="incorrectEmail()[pri:0, instance:XeroAppTestCases@67205a84]" name="incorrectEmail" duration-ms="3468" started-at="2020-04-10T11:30:24 PDT" finished-at="2020-04-10T11:30:28 PDT">
+        <test-method status="PASS" signature="incorrectEmail()[pri:0, instance:XeroAppTestCases@67205a84]" name="incorrectEmail" duration-ms="4071" started-at="2020-04-12T22:15:33 PDT" finished-at="2020-04-12T22:15:37 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- incorrectEmail -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="130" started-at="2020-04-10T11:30:28 PDT" finished-at="2020-04-10T11:30:28 PDT">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="233" started-at="2020-04-12T22:15:37 PDT" finished-at="2020-04-12T22:15:37 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="1082" started-at="2020-04-10T11:30:28 PDT" finished-at="2020-04-10T11:30:29 PDT">
+        <test-method status="PASS" signature="intialize()[pri:0, instance:XeroAppTestCases@67205a84]" name="intialize" is-config="true" duration-ms="1081" started-at="2020-04-12T22:15:37 PDT" finished-at="2020-04-12T22:15:38 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialize -->
-        <test-method status="PASS" signature="incorrectPassword()[pri:0, instance:XeroAppTestCases@67205a84]" name="incorrectPassword" duration-ms="5514" started-at="2020-04-10T11:30:29 PDT" finished-at="2020-04-10T11:30:34 PDT">
+        <test-method status="PASS" signature="incorrectPassword()[pri:0, instance:XeroAppTestCases@67205a84]" name="incorrectPassword" duration-ms="5194" started-at="2020-04-12T22:15:38 PDT" finished-at="2020-04-12T22:15:43 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- incorrectPassword -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="161" started-at="2020-04-10T11:30:34 PDT" finished-at="2020-04-10T11:30:35 PDT">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:XeroAppTestCases@67205a84]" name="closeBrowser" is-config="true" duration-ms="243" started-at="2020-04-12T22:15:43 PDT" finished-at="2020-04-12T22:15:43 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- XeroAppTestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
