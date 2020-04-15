@@ -20,7 +20,7 @@ public class AppTesting {
 	
 	public static void logoutMacys() throws InterruptedException {
 		driverMob.findElement(By.id("com.macys.android:id/global_navigation_account_tab")).click();
-		swipe();
+		scroll();
 //		driverMob.findElement(By.id("com.macys.android:id/button_signout")).click();
 		Thread.sleep(2000);
 	}	
@@ -119,7 +119,7 @@ public class AppTesting {
 		//String sContContains ="com.macys.android:id/label_get_help_share_feedback";
 		String sContContains ="Customer Service";
 		MobileElement scroll = (MobileElement) driverMob.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"" +sList + "\"))"
-				+ ".scrollIntoView(new UiSelector().text(\"" +sContContains+ "\"))");
+				+ ".scrollIntoView(new UiSelector().resourceid(\"" +sContContains+ "\"))");
 	}
 	public static void swipe() throws InterruptedException {
 //		Dimension dimension = driverMob.manage().window().getSize();

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="XeroAppTestCases">
+      <class name="Pages.LoginTestCase">
         <methods>
-          <include name="intialize"/>
-          <include name="forgotPassword"/>
-          <include name="closeBrowser"/>
+          <include name="Close"/>
+          <include name="setup"/>
+          <include name="Login"/>
         </methods>
-      </class> <!-- XeroAppTestCases -->
+      </class> <!-- Pages.LoginTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
