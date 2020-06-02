@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Pages.LoginTestCase">
+      <class name="Pages.UserMenuTestCases">
         <methods>
-          <include name="Close"/>
+          <include name="TC06"/>
           <include name="setup"/>
-          <include name="Login"/>
+          <include name="Close"/>
         </methods>
-      </class> <!-- Pages.LoginTestCase -->
+      </class> <!-- Pages.UserMenuTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

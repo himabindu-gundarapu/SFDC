@@ -32,13 +32,13 @@ public class AppTesting {
 		cap.setCapability("appPackage","com.macys.android");
 		cap.setCapability("automationName","uiautomator2");
 		cap.setCapability("appActivity","com.macys.main.ui.activity.MainActivity");		
-		cap.setCapability(MobileCapabilityType.NO_RESET,false);
+		cap.setCapability(MobileCapabilityType.NO_RESET,true);
 	}
 	
 	public static void loginMacys() throws InterruptedException {
-		driverMob.findElement(By.id("com.macys.android:id/btnSecond")).click();
-		driverMob.findElement(By.id("com.macys.android:id/btnSecond")).click();
-		driverMob.findElement(By.className("android.widget.TextView")).click();
+		//driverMob.findElement(By.id("com.macys.android:id/btnSecond")).click();
+		//driverMob.findElement(By.id("com.macys.android:id/btnSecond")).click();
+		driverMob.findElementByAndroidUIAutomator("UiSelector().textContains(\"Welcome!\")").click();
 		driverMob.findElement(By.id("com.macys.android:id/field_auth_email")).sendKeys("testqa2020mar@gmail.com");
 		driverMob.findElement(By.id("com.macys.android:id/field_auth_password")).sendKeys("chan123@123");
 		driverMob.findElement(By.id("com.macys.android:id/button_auth_sign_in")).click();
@@ -115,11 +115,10 @@ public class AppTesting {
 //		TouchAction scroll= new TouchAction(driverMob);
 //		scroll.press(PointOption.point(x,startY)).waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
 //		.moveTo(PointOption.point(x,endY)).release().perform();
-		String sList = "com.macys.android:id/label_shopping_preferences_header";
-		//String sContContains ="com.macys.android:id/label_get_help_share_feedback";
+		String sList = "com.macys.android:id/scroll_container_account_screen_landing";
 		String sContContains ="Customer Service";
 		MobileElement scroll = (MobileElement) driverMob.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"" +sList + "\"))"
-				+ ".scrollIntoView(new UiSelector().resourceid(\"" +sContContains+ "\"))");
+				+ ".scrollIntoView(new UiSelector().text(\"" +sContContains+ "\"))");
 	}
 	public static void swipe() throws InterruptedException {
 //		Dimension dimension = driverMob.manage().window().getSize();

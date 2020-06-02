@@ -43,7 +43,7 @@ public class SFDC_TestCases extends ReusableMethods {
 //		TC3_CheckRememberMe();
 		// Forgotpasword_A();
 //		 Forgotpassword_B();
-		// TC_05();
+		TC_05();
 		// TC_06();
 		// TC_07();
 		// TC_08();
@@ -74,7 +74,7 @@ public class SFDC_TestCases extends ReusableMethods {
 		// TC_33();
 		// TC_34();
 		 // TC_35();
-		 TC_37();
+		// TC_37();
 		CloseBrowser();
 		CloseReport();
 
